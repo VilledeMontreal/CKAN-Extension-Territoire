@@ -1,0 +1,11 @@
+setup.py
+ckanext/__init__.py
+ckanext/villedemontreal/__init__.py
+ckanext/villedemontreal/plugin.py
+ckanext_villedemontreal.egg-info/PKG-INFO
+ckanext_villedemontreal.egg-info/SOURCES.txt
+ckanext_villedemontreal.egg-info/dependency_links.txt
+ckanext_villedemontreal.egg-info/entry_points.txt
+ckanext_villedemontreal.egg-info/namespace_packages.txt
+ckanext_villedemontreal.egg-info/not-zip-safe
+ckanext_villedemontreal.egg-info/top_level.txt

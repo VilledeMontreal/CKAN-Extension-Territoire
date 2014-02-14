@@ -1,0 +1,43 @@
+{% ckan_extends %}
+
+{# Remove 'free extras' from the package form. If you're using
+convert_to/from_extras() as we are with our 'custom_text' field below then
+you need to remove free extras from the form, or editing your custom field
+won't work. #}
+
+{% block package_metadata_fields %}
+
+  <div class="control-group">
+    <label class="control-label" for="field-territoire">{{ _("Territoire") }}</label>
+    <div class="controls">
+      <select id="field-territoire" name="territoire" data-module="autocomplete" multiple>
+        {% for territoire in h.territoires()  %}
+          <option value="{{ territoire }}" {% if territoire in data.get('territoire', []) %}selected="selected"{% endif %}>{{ territoire }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="field-frequence_de_mise_a_jour">{{ _("Fréquence de mise à jour") }}</label>
+    <div class="controls">
+      <select id="field-frequence_de_mise_a_jour" name="frequence_de_mise_a_jour" data-module="autocomplete">
+        {% for frequence_de_mise_a_jour in h.frequences_de_mise_a_jour()  %}
+          <option value="{{ frequence_de_mise_a_jour }}" {% if frequence_de_mise_a_jour in data.get('frequence_de_mise_a_jour', []) %}selected="selected"{% endif %}>{{ frequence_de_mise_a_jour }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="field-unite_geographique">{{ _("Unité géographique") }}</label>
+    <div class="controls">
+      <select id="field-unite_geographique" name="unite_geographique" data-module="autocomplete">
+        {% for unite_geographique in h.unites_geographique()  %}
+          <option value="{{ unite_geographique }}" {% if unite_geographique in data.get('unite_geographique', []) %}selected="selected"{% endif %}>{{ unite_geographique }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </div>
+
+  {{ super() }}
+
+{% endblock %}

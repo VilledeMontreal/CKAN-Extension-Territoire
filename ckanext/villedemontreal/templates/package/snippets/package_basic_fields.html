@@ -1,0 +1,7 @@
+{% ckan_extends %}
+{% block package_basic_fields_custom %}
+  {{ form.input('periode_couverte', label=_('Période couverte'), id='field-periode_couverte', placeholder=_('custom text'), value=data.periode_couverte, error=errors.periode_couverte, classes=['control-medium']) }}
+  {{ form.input('unite_administrative', label=_('Unité administrative'), id='field-unite_administrative', placeholder=_('custom text'), value=data.unite_administrative, error=errors.unite_administrative, classes=['control-medium']) }}
+  {{ form.markdown('methodologie', label=_('Méthodologie'), id='field-methodologie', placeholder=_('custom text'), value=data.methodologie, error=errors.methodologie, classes=[]) }}
+  {{ form.input('premiere_date_de_publication', label=_('Première date de publication'), id='field-premiere_date_de_publication', placeholder=_('custom text'), value=data.premiere_date_de_publication, error=errors.premiere_date_de_publication, classes=['control-medium']) }}
+{% endblock %}

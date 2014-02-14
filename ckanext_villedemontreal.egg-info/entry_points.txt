@@ -1,0 +1,6 @@
+
+        [ckan.plugins]
+	# Add plugins here, eg
+	ville_de_montreal=ckanext.villedemontreal.plugin:IDatasetVilledeMontrealPlugin
+	facet_territoire=ckanext.villedemontreal.plugin:IFacetTerritoirePlugin
+	
