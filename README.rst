@@ -22,7 +22,7 @@ Install the plugin using pip. Download it, then from the ckanext- villedemontrea
 
 ::
 
-    $ pip install -e git+https://github.com/VilledeMontreal/ckanext-territoire.git#egg=ckanext-territoire
+    $ pip install -e git+https://github.com/VilledeMontreal/CKAN-Extension-Territoire.git#egg=ckanext-territoire
 
 
 
